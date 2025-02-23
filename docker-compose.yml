@@ -7,5 +7,18 @@ services:
     volumes:
       - ./nfs_service/share/html:/usr/share/nginx/html
     ports:
-      - "80:80"
+      - "8080:80"
     restart: always
+  
+  doc_vol_service:
+    build:
+      context: ./doc_vol_service
+      dockerfile: Dockerfile
+    container_name: doc_vol_service
+    volumes:
+      - docker_data:/usr/share/nginx/html
+    ports:
+      - "8081:80"
+
+volumes:
+  docker_data:
