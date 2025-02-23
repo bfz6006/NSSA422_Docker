@@ -1,0 +1,11 @@
+services: 
+  nfs_service:
+    build:
+      context: ./nfs_service
+      dockerfile: Dockerfile
+    container_name: nfs_nginx
+    volumes:
+      - ./nfs_service/share/html:/usr/share/nginx/html
+    ports:
+      - "80:80"
+    restart: always
