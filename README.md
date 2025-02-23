@@ -20,7 +20,9 @@ Repo For Docker Deployment for Storage Architectures
      
 # Troubleshooting: 
   403 Forbidden Error: Ensure that the permissions on the shared NFS volume or Docker volume are set correctly. The Nginx container must have access to read the files.
+  
   Volume Not Reflecting Changes: If the volume is not showing the changes immediately, check that the files are correctly mounted and that the Nginx container has access to the mounted directory.
-License
+
+# License:
 This project is licensed under the MIT License - see the LICENSE file for details.
 
