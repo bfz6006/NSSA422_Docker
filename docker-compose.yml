@@ -22,3 +22,4 @@ services:
 
 volumes:
   docker_data:
+     name: docker_data
